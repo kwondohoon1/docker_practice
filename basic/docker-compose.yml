@@ -1,0 +1,13 @@
+version: '3.8'
+services:
+  java-app1:
+    build: 
+      context: .
+      dockerfile: DockerfileJava1
+    image: myjava1:v1
+
+  java-app2:
+    build: 
+      context: .
+      dockerfile: DockerfileJava2
+    image: myjava2:v1

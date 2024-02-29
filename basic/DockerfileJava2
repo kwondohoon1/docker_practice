@@ -1,0 +1,14 @@
+# 컨테이너 내에서 사용할 java 설치
+FROM openjdk:11
+
+# 작업 디렉토리 설정
+WORKDIR /app
+
+# 현재 디렉토리의 파일을 컨테이너의 /app 디렉토리로 복사
+COPY HelloWorld2.java /app
+
+# HelloWorld.java 파일을 컴파일
+RUN javac HelloWorld2.java
+
+# 컨테이너가 실행될 때 HelloWorld 클래스 실행
+CMD ["java", "HelloWorld2"]
